@@ -1,0 +1,20 @@
+
+<!-- <div class="navi-items xs-col-2">
+  <div routerLink="./main" class="item">
+    <span >Item 1</span>
+  </div>
+  <div routerLink="./pageone"  class="item">
+    <span >Item 1</span>
+  </div>
+  
+</div> -->
+<div class="side-nav col-sm-3 hidden-xs">
+<div *ngFor="let menu of menuList" class="navi-items xs-col-2"  >
+  <div routerLink={{menu.routerLink}} class="">
+    <span style="font-size: 12px;">{{menu.label}}</span>
+  </div>
+  </div>
+  </div>
+  
+
+

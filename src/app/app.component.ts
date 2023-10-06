@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  menuList: any[];
   title = 'bassApp';
+  
+
+  ngOnInit(){
+    this.menuList = [];
+  this.menuList =[
+    {
+      label:'Dashboard', 
+      routerLink: 'home'
+    }
+  ];
+}
 }

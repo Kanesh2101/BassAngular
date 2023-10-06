@@ -1,0 +1,77 @@
+ <!-- <div class="xs-col-12">
+<div class="xs-col-2">
+<ul >
+    <li *ngFor="let item of items">
+        <a class="" routerLink="pageone" >
+            <span>{{item}}</span>
+        </a>
+    </li>
+</ul>
+</div>
+<div class="xs-col-6">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pictures</a></li>
+        <li><a href="#">Summer 15</a></li>
+        <li>Italy</li>
+      </ul>
+</div>
+</div> -->
+
+<div class="col-sm-9 mega-menu">
+    <div class="row">
+        <div class="col-sm-1">
+       <div>       
+        <ul>
+            <li>
+                <a class="" routerLink="" >
+                    <span>PI</span>
+                </a>
+                <ul>
+                    <li>
+                        <a class="" routerLink="Chart1" >
+                            <span>Chart 1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" routerLink="Chart2" >
+                            <span>Chart 2</span>
+                        </a>
+                    </li>
+                </ul>
+                <a class="" routerLink="Research" >
+                    <span>My Research</span>
+                </a>
+            </li>
+            
+        </ul>
+        </div>
+    </div>
+    <!-- <div class="xs-col-3">
+        <ul class="breadcrumb" >
+            <li *ngFor="let item of path">
+              <a (click)="rerouteOnClick(item)" routerLink={{reroutePath}}>{{item}}</a>
+            </li>
+            
+          </ul>
+    </div> -->
+    
+    <!-- <ul>
+        <li >
+            <a class="" routerLink="pageone" >
+                <span>{{item.level1Menu}}</span>
+            </a>
+            <ul *ngIf="item.innerMenu != null">
+                <li *ngFor="let innerItem of item.innerMenu">
+                    <a class="" routerLink="pageone" >
+                        <span>{{innerItem.innerlabel}}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul> -->
+    <router-outlet></router-outlet>
+    </div>
+</div>
+
+

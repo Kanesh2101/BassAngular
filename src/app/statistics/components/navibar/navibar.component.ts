@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuList } from 'src/menuitems.service';
 
 @Component({
@@ -9,11 +9,14 @@ import { MenuList } from 'src/menuitems.service';
   providers: [MenuList]
 })
 export class NavibarComponent {
+
+  @Output() urlVal = new EventEmitter<string>();
+
   sidebarVisible: boolean = false;  
   menuList: any[];
   menuId: any;
   filteredMenuList: any;
-  constructor(private activatedRoute: ActivatedRoute,private service: MenuList){}
+  constructor(private activatedRoute: ActivatedRoute,private router: Router, private service: MenuList){}
 
   ngOnInit(){
     this.menuList = [ ]; 
@@ -29,32 +32,19 @@ export class NavibarComponent {
       },
       {
         label:'Project', 
-        routerLink: 'Research'
+        routerLink: 'Project'
       },
 
     ];
    
-    // this.service.menus.forEach(item=>{
-    //   console.log("item", item);
-    //   item.sideMenu.forEach(item2=>{
-    //     console.log("item2", item2.label);
-    //     if(item2 != null){
-    //       this.menuList.push(item2.label);
-    //     }
-        
-    //   })
-    // })
-
-  //   this.filteredMenuList.forEach((item: { sideMenu: any; })=>{
-  //     console.log("filteritem", item.sideMenu);
-  //     item.sideMenu.forEach((menu: { label: string; } | null)=>{
-  //       if(menu != null){
-  //         this.menuList.push(menu.label);
-  //       }
-  //     })
-  //   })
-  //   console.log("menulist", this.menuList);
   }
+
+  ngOnChange(){
+    this.passVal(this.router.url)
+  }
+  public passVal(url: any): void {
+    this.urlVal.emit(url);
+}
 
   openNav(){
     console.log("test");

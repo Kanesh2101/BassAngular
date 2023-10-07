@@ -1,40 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
-/* html, body {
- 
-    height: 100%;
-    width: 100%;
-
-    
-    height: 100vh;
-
- 
-    width: 100vw;
-
-
-    margin: 0;
-} */
-
-
-  /* .main-container {
-    display: flex;
-    .side-nav {
-      width: 60px;
-      min-width: 50px;
-      min-height: calc(100vh - 70px);
-      background-color: #113c60;
-      color: #fff;
-      box-shadow: 5px 5px 5px #939393;
-      @media only screen and (max-width: 1300px) {
-        width: 100px;
-        min-width: 100px;
-      }
-    }
-    .main {
-      padding: 30px;
-    }
-  } */
 
   ul{
     padding-left: 1px;
@@ -52,7 +18,7 @@
   .side-nav {
     width: 75px;
     min-width: 50px;
-    min-height: calc(100vh - 70px);
+    min-height: calc(105vh - 70px);
     background-color: #113c60;
     color: #fff;
     padding-left: 1px;
@@ -63,21 +29,22 @@
     }
   }
 
+  .mat-toolbar-row, .mat-toolbar-single-row{
+    width: 101% !important;
+  }
+
   .mega-menu {
     min-height: calc(100vh - 70px);
     background-color: #ffffff;
     color: #fff;
   }
-/*Temp*/
 .row.content {height: 550px}
     
-/* Set gray background color and 100% height */
 .sidenav {
   background-color: #f1f1f1;
   height: 100%;
 }
     
-/* On small screens, set height to 'auto' for the grid */
 @media screen and (max-width: 767px) {
   .row.content {height: auto;} 
 }
@@ -89,12 +56,12 @@
 .toolbar {
     overflow: hidden;
     background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed; 
+    top: 0;
+    width: 100%; 
   }
   
-  /* Links inside the navbar */
+  
   .toolbar a {
     float: left;
     display: block;
@@ -104,15 +71,15 @@
     text-decoration: none;
   }
   
-  /* Change background on mouse-over */
+  
   .toolbar a:hover {
     background: #ddd;
     color: black;
   }
   
-  /* Main content */
+  
   .main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
+    margin-top: 30px; 
   }
 
   .navi-items {

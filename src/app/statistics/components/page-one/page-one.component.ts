@@ -36,10 +36,5 @@ export class PageOneComponent {
         tempName += currentPath[i];
       }
     }
-    console.log("path", this.path);
-
-      // this.items = [{ label: 'Computer', routerLink:'' }, { label: 'Notebook' }, { label: 'Accessories' }, { label: 'Backpacks' }, { label: 'Item' }];
-
-      // this.home = { icon: 'pi pi-home', routerLink: '/' };
   }
 }

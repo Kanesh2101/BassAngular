@@ -9,13 +9,14 @@ import { Chart2Component } from './components/chart2/chart2.component';
 import { ResearchComponent } from './components/research/research.component';
 
 
+
 @NgModule({
   declarations: [
     PageOneComponent,
     MainComponent,
     Chart1Component,
     Chart2Component,
-    ResearchComponent
+    ResearchComponent,
   ],
   imports: [
     CommonModule,

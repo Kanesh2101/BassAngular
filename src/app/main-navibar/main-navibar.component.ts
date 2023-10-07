@@ -8,23 +8,7 @@ import { Component, Input } from '@angular/core';
 export class MainNavibarComponent {
 
   @Input()  menuList: any;
-  // menuList : any[]; 
 
   ngonInit(){
-    // console.log("menu home", this.menu);
-    // this.menuList = [ ];
-    // // this.menuList = this.menu; 
-    // this.menuList =[
-    //   {
-    //     label:'Procurement', 
-    //     routerLink: 'Procurement'
-    //   },
-    //   {
-    //     label:'Project', 
-    //     routerLink: 'pageone'
-    //   },
-
-    // ];
-
   }
 }

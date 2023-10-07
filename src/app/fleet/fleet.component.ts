@@ -14,11 +14,11 @@ export class FleetComponent {
     this.menuList =[
       {
         label:'Fleet 1', 
-        routerLink: ''
+        routerLink: 'Fleet'
       },
       {
         label:'Fleet 2', 
-        routerLink: ''
+        routerLink: 'Fleet'
       },
 
     ];

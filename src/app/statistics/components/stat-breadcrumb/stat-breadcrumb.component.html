@@ -1,0 +1,15 @@
+<div class="col-sm-9 mega-menu">
+    <div class="row">
+<div class="xs-col-3">
+    <ul class="breadcrumb" >
+        <li *ngFor="let item of path">
+          <a (click)="rerouteOnClick(item)" routerLink={{reroutePath}}>{{item}}</a>
+        </li>
+        
+      </ul>
+</div>
+<router-outlet></router-outlet>
+</div>
+
+</div>
+

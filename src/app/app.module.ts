@@ -10,8 +10,6 @@ import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import {PanelMenuModule} from 'primeng/panelmenu';
-
-import { MenuItem } from 'primeng/api';
 import {BreadcrumbModule} from 'xng-breadcrumb'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +22,9 @@ import { WorkComponent } from './work/work.component';
 import { StatisticsComponent } from './statistics/components/statistics-dashboard/statistics.component';
 import { HomeComponent } from './home/home.component';
 import { MenulistService } from './menulist.service';
+import { StatBreadcrumbComponent } from './statistics/components/stat-breadcrumb/stat-breadcrumb.component';
 import { MainNavibarComponent } from './main-navibar/main-navibar.component';
+import { StatProjectComponent } from './statistics/components/stat-project/stat-project.component';
 
 
 
@@ -38,6 +38,8 @@ import { MainNavibarComponent } from './main-navibar/main-navibar.component';
     StatisticsComponent,
     HomeComponent,
     MainNavibarComponent,
+    StatBreadcrumbComponent,
+    StatProjectComponent
   ],
   imports: [
     BrowserModule,

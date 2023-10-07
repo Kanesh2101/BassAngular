@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-research',
-  templateUrl: './research.component.html',
-  styleUrls: ['./research.component.css']
+  selector: 'app-stat-breadcrumb',
+  templateUrl: './stat-breadcrumb.component.html',
+  styleUrls: ['./stat-breadcrumb.component.css']
 })
-export class ResearchComponent {
-  
-  constructor(private router: Router){}
+export class StatBreadcrumbComponent {
+  constructor(private router: Router, private activeRoute: ActivatedRoute){}
 
 
   path: string[];
   reroutePath : string;
   ngOnInit() {
+    
     this.path = [];
     this.reroutePath = this.getCurrentPath();
     
@@ -34,6 +34,10 @@ export class ResearchComponent {
       }
     }
     console.log("path", this.path);
+  }
+
+  ngOnChanges(){
+    console.log("current stat route,", this.activeRoute);
   }
 
   populateBreadcrumb(){
@@ -58,6 +62,7 @@ export class ResearchComponent {
   }
 
   rerouteOnClick(path: string){
+    console.log(path);
     this.populateBreadcrumb();
     let tempPath = this.getCurrentPath();
     let indx = tempPath.lastIndexOf(path);
@@ -67,9 +72,15 @@ export class ResearchComponent {
     this.reroutePath = substr;
   }
 
+  ngOnChange(){
+    console.log("statBreadcrumb route", this.router.url);
+
+  }
   getCurrentPath(){
-    console.log("activateRoutePageOne", this.router.url);
+    console.log("statBreadcrumb route", this.router.url);
     let currentPath = this.router.url;
     return currentPath;
   }
+
+
 }
